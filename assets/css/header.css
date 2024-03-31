@@ -1,0 +1,26 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    padding: 5px;
+    display: flex;
+    /* border: 10px solid red; */
+    align-items: center;
+    justify-items: center;
+    justify-content: start;
+    /* background-color: black !important; */
+    height: 70px;
+}
+
+.icons_header
+{
+    display: flex;
+    gap: 20px;
+    color: white;
+    font-size: 25px;
+    position: absolute;
+    right: 0;
+    margin-right: 20px;
+}

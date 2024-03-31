@@ -1,0 +1,426 @@
+
+
+body{
+    margin: 0;
+    padding: 0;
+
+    /* border: 20px solid red; */
+}
+
+@media (min-width:700px) {
+
+body{
+    margin: 0 25% 0 25%
+}
+    
+}
+
+div,p {
+     /* border: 1px solid red;   */
+    
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+
+}
+
+a{
+    text-decoration: none;
+    width: 100%;
+}
+i{
+    font-size: 30px;
+    /* border: 1px solid red; */
+    padding: 3px;
+    margin: 0 5px 0 5px ;
+}
+ 
+.profilePage {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-top: 20px;
+}
+
+.profilePage i {
+    color: #00bfff;
+}
+
+.home_logo {
+    display: flex;
+    align-items: center;
+
+    font-weight: 1;
+}
+
+.partnerDashboard {
+    background: url("../../assets/graphics/tools.jpg") no-repeat center;
+
+    background-size: cover;
+    /* Ensure the background image covers the entire width */
+
+    height: 100px;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    color: white;
+    /* opacity: 90%; */
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+    /* Add a text shadow for better visibility */
+
+}
+
+a {
+    text-decoration: none;
+    /* color: black; */
+}
+
+
+.mainTitle {
+    /* background: aliceblue; */
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.titleProfile {
+    font-size: 22px;
+}
+
+.subTitle {
+    font-size: 18px;
+    margin-bottom: 10px;
+
+}
+
+.mainContent {
+
+    /* border: 1px solid red; */
+    margin: 10px 0 20px 0;
+    padding: 20px;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+
+    border-radius: 5px;
+}
+
+.SubMainContent {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 10px 20px;
+}
+
+.rowContent {
+    gap: 10px;
+    display: flex;
+
+}
+
+.columnContent{
+    margin:10px 0  0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+
+
+.tileContent {
+
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+.contentTitle {
+    cursor: pointer;
+    display: flex;
+    gap: 10px;
+    border-radius: 5px;
+    padding: 20px;
+    color: white;
+    border-radius: 50px;
+    background-color: rgba(0, 0, 0, 0.747);
+}
+
+.contentTitle a {
+    color: white;
+    text-decoration: none;
+}
+
+.circleBox {
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    /* Make it a perfect circle */
+    overflow: hidden;
+    /* Ensure the image stays within the circle */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(6, 6, 243, 0.073);
+}
+
+
+
+.AddCar {
+    margin: 5px 0 0px 0;
+    padding-bottom: 10px;
+    display: flex;
+    gap: 20px;
+    /* border: 5px solid rgb(3, 255, 45); */
+    width: 100%;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.AddCarBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.PriceBox {
+    padding-left: 10px;
+    border-radius: 5px;
+    border: 0;
+    width: 100px;
+    
+}
+
+.AddPlaces {
+    /* border: 1px solid red; */
+    width: 100%;
+}
+.dayOfStay{
+    width: 100%;
+    margin: 5px;
+    border: 1.8px dotted #958f8f86;
+    border-radius: 10px;
+    padding: 5px;
+
+}
+
+.addMorePlaces {
+    border-radius: 20px;
+    padding: 10px;
+    border: 0;
+}
+
+.borderBox {
+    width: 100%;
+    display: block;
+    border: 1px solid rgb(79, 64, 64);
+}
+
+.finalReviewAndSubmit {
+    border-radius: 5px;
+    padding: 5px;
+    color: white;
+    background-color: rgb(85, 216, 24) !important;
+    width: 100%;
+    border: 0;
+}
+
+.mainProfileSection {
+    width: 100%;
+    gap: 20px;
+    align-items: center;
+    display: flex;
+}
+
+.tol_rooms_cars {
+    display: flex;
+    gap: 10px;
+}
+
+.metrics {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.journies_compoleted {
+    margin-bottom: 5px;
+    border-bottom: 1px solid red;
+}
+
+
+
+
+.becomeDriver {
+    background: url("/src/assets/graphics/driver.jpg") no-repeat center;
+
+    background-size: cover;
+    /* Ensure the background image covers the entire width */
+
+    height: 100px;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    color: white;
+    /* opacity: 90%; */
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+    /* Add a text shadow for better visibility */
+
+
+}
+
+.becomeDriverForm_DIV {
+    /* border:1px solid red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.becomeDriverForm {
+    width: 80%;
+}
+
+.becomeDriverForm input,
+.addAsHotelForm input {
+    outline: none;
+    border-radius: 20px;
+    border: 0;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.becomeDriverForm button {
+
+    border-radius: 20px;
+    border: 0;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: wheat;
+    background-color: rgba(6, 5, 5, 0.836);
+}
+
+
+.formFeilds {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+
+.addAsNewHotel {
+    background: url("/src/assets/graphics/hotel.jpg") no-repeat;
+    background-size: cover;
+    /* Ensure the background image covers the entire width */
+
+    height: 100px;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    color: white;
+    /* opacity: 90%; */
+    font-weight: bold;
+    text-shadow: 2px 1px 2px rgb(0, 0, 0);
+    /* Add a text shadow for better visibility */
+
+}
+
+
+
+.upload-image {
+    border-radius: 20px;
+    padding: 10px 20px;
+    background-color: rgb(220, 220, 227);
+    margin: 10px 0 20px;
+    cursor: pointer;
+}
+
+.profilePhoto {
+    width: 100%;
+    /* Ensure the image fits within the container */
+    height: 100%;
+    /* Ensure the image fits within the container */
+    object-fit: cover;
+    /* Maintain aspect ratio and cover the container */
+    border-radius: 50%;
+    /* Make the image circular */
+}
+
+
+
+/* PROFILEPAGE */
+.settings {
+    position: absolute;
+    right: 20px;
+    top: 0;
+}
+
+.profileOptions {
+    /* border: 1px solid red; */
+    margin-top: 60px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 5px;
+
+    cursor: pointer;
+}
+
+.option {
+
+    font-size: 18px;
+    display: flex;
+    width: 100%;
+    padding: 14px;
+    border-radius: 5px;
+    /* background-color: #4fd606; */
+    background-color: #a1a1a15d;
+}
+
+
+/* driverFirends */
+
+.frinedList{
+    margin-top: 20px;
+}
+.circleBox_friend{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    /* Make it a perfect circle */
+    overflow: hidden;
+    /* Ensure the image stays within the circle */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(220, 220, 227);
+}
+.frinedListOption{
+    display: flex;
+    align-items: start;
+}
+
+@media (max-width:700px) {
+i{
+    font-size: 25px;
+}
+}
+/*    .mainContent {
+        margin: 10px;
+        width: 100%;
+    }
+
+    .becomeDriverForm {
+        width: 100%;
+    }
+} */

@@ -158,7 +158,7 @@ function insertIntoDB($uniqueID, $given_name, $family_name, $email, $gender, $pi
 {
     require('assets/db.php');
 
-    $query = "INSERT INTO users (userUniqueID,first_name, last_name, email, gender, picture) VALUES ('$uniqueID','$given_name', '$family_name', '$email', '$gender', '$picture')";
+    $query = "INSERT INTO users (userUniqueID,first_name, last_name, email, gender, picture, created) VALUES ('$uniqueID','$given_name', '$family_name', '$email', '$gender', '$picture', '".time()."')";
 
     mysqli_query($conn, $query);
     // Check for errors if needed

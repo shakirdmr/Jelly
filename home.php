@@ -17,10 +17,10 @@ require("components/includeAllHTML_CSS_FILES.php");
 
 
     // // Set cookie expiration time to 6 months
-    // $expiration = time() + (6 * 30 * 24 * 60 * 60); // 6 months from now
+    $expiration = time() + (6 * 30 * 24 * 60 * 60); // 6 months from now
 
     // // Set the cookie
-    // setcookie('userUniqueID', "66000e5729ae04.96590207_boy", $expiration, '/');
+    // setcookie('userUniqueID', "66000e5729ae04.96590207_Shakirsjd", $expiration, '/');
 
     
     ?>

@@ -68,14 +68,16 @@ require("components/includeAllHTML_CSS_FILES.php");
 
 
         <div class="add">
+        <h2 class="mt-2"> Add </h2> (Replies will be secret)
 
+        <h6 class="mt-4">Your identity will not be secret </h6>
             <a href="addAsk">
                 <div class="addItem">
                     <!-- <button> -->
                     <i class="bi bi-pencil-square"></i>
                     <div>
 
-                        Add new Ask <br />(Question, Suggestion ...)
+                        Add new Ask <br />(Question, Confession, tbh ...)
                     </div>
                     <!-- </button> -->
                 </div>
@@ -94,6 +96,8 @@ require("components/includeAllHTML_CSS_FILES.php");
 
 
 
+            
+        <h6 class="mt-5">Your identity will be secret  </h6>
             <div class="addItem">
 
                 <!-- <button> -->

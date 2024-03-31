@@ -9,8 +9,9 @@ require("components/includeAllHTML_CSS_FILES.php");
     input {
         padding: 10px;
         width: 100%;
-        border-radius: 20px;
-        border: 1px solid #f1f1f1;
+        border: 0;
+
+        /* border: 1px solid #f1f1f1; */
     }
 </style>
 
@@ -20,6 +21,12 @@ require("components/includeAllHTML_CSS_FILES.php");
 
     require("components/homeFooter.php");
     require("assets/db.php");
+
+    if(isset($_POST["shareQuestionOnJellyAndOtherPlatforms"]))
+    {
+        echo $ask = $_POST["ask"];
+    }
+
 
     if (isset($_GET["query"])) {
         $query = $_GET["query"];
@@ -66,15 +73,85 @@ require("components/includeAllHTML_CSS_FILES.php");
 
     <div class="mainContent">
 
-    <h2> Add Ask </h2>
+        <form action="addAsk" method=POST>
+        <h2> Add Ask </h2>
 
-        <div class="add">
-
-           
-
+        <div class="addBox">
+            <h6> Add your Question that other people can answer. You won't know who they are (anonymous).
         </div>
+        
+            <input class="questionBox" type="text" placeholder="Type here" style="width: 100%;" id="questionBox" name="ask"/>
 
 
+        <button type="submit" style="width:100%" class="mt-3" 
+        onclick='shareAsk()'
+        name="shareQuestionOnJellyAndOtherPlatforms">
+        Share
+        </button>
+</form>
+
+
+    </div>
+
+
+
+    <script>
+        window.onload = function() {
+            var placeholders = [
+                "Describe me in 3 words!",
+                "What u like in me?",
+                "Should I goto school tommorow?"
+            ];
+
+            // Function to update placeholder
+            function updatePlaceholder() {
+                var now = new Date();
+                var index = now.getSeconds() % placeholders.length;
+                document.getElementById("questionBox").setAttribute("placeholder", placeholders[index]);
+            }
+
+            // Update placeholder initially
+            updatePlaceholder();
+
+            // Update placeholder every second
+            setInterval(updatePlaceholder, 2000);
+        };
+
+
+        
+            function shareAsk() {
+                // AJAX request
+                var xhr = new XMLHttpRequest();
+                xhr.open('POST', 'trueBackend/shareAsk.php', true);
+                xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+
+                // Callback function when the AJAX request completes
+                xhr.onload = function() {
+                    if (xhr.status >= 200 && xhr.status < 300) {
+
+                        // Request was successful, handle response
+                        var response = JSON.parse(xhr.responseText);
+                        //console.log(response);
+
+                        if (response.success) {
+
+                            alert("successfully shared it now show instagram facebook snapchar whatsapp sahre options");
+                        } else {
+                            alert('Failed to add person to the database.');
+                        }
+                    } else {
+                        // Request failed
+                        alert('Failed to send AJAX request.');
+                    }
+                };
+
+                // Send the AJAX request with the person's ID
+                var params = 'ask=' + document.getElementById('questionBox');
+                xhr.send(params);
+            }
+        
+
+    </script>
 </body>
 
 </html>

@@ -154,7 +154,7 @@ require("components/includeAllHTML_CSS_FILES.php");
 
                         // Request was successful, handle response
                         var response = JSON.parse(xhr.responseText);
-                        console.log(response);
+                        // console.log(response);
 
                         if (response.success) {
                             var button = document.getElementById(found_id);

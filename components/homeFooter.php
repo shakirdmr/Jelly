@@ -1,10 +1,7 @@
-<style>
-    </style>
 <?php
 // Include Configuration File
  $userUniqueID = $_COOKIE["userUniqueID"];
 
-require('assets/traffic_saver.php');
 require("components/includeAllHTML_CSS_FILES.php");
 
 require("assets/db.php");
@@ -44,7 +41,7 @@ if (!$query) {
 
         <a href="bell">
 
-        <div class='notification'>
+        <div class='notification' >
         <i class="bi bi-bell"> </i>
 
         <?php if($totalNotifications !=0) 

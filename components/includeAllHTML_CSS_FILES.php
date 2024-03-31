@@ -22,6 +22,7 @@
     <link rel='stylesheet' href="./assets/css/search.css" />
     <link rel='stylesheet' href="./assets/css/add.css" />
     <link rel='stylesheet' href="./assets/css/notifications.css" />
+    <link rel='stylesheet' href="./assets/css/addAsk.css" />
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> <!-- Import jQuery -->

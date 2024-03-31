@@ -8,6 +8,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 30px 30px 0 0;
+
 }
 
 i{
@@ -22,7 +23,7 @@ i{
   width: 40%;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 @media (max-width: 700px) {

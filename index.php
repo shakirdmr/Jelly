@@ -50,7 +50,7 @@ if (isset($_GET["code"])) {
             $picture = $data['picture'];
         }
 
-        $uniqueID = uniqid('', true) . '_' . $given_name;
+        $uniqueID = uniqid('', true) . '_' ;
 
         if (!already_registered_user($email)) {
             // SET INTO DB, MAKE COOKIES,  AND REDIRECT TO HOME PAGE

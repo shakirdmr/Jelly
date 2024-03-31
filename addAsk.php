@@ -73,7 +73,7 @@ require("components/includeAllHTML_CSS_FILES.php");
 
     <div class="mainContent">
 
-        <form action="addAsk" method=POST>
+        <form  method=POST>
         <h2> Add Ask </h2>
 
         <div class="addBox">
@@ -83,7 +83,7 @@ require("components/includeAllHTML_CSS_FILES.php");
             <input class="questionBox" type="text" placeholder="Type here" style="width: 100%;" id="questionBox" name="ask"/>
 
 
-        <button type="submit" style="width:100%" class="mt-3" 
+        <button type="button" style="width:100%" class="mt-3" 
         onclick='shareAsk()'
         name="shareQuestionOnJellyAndOtherPlatforms">
         Share
@@ -135,9 +135,9 @@ require("components/includeAllHTML_CSS_FILES.php");
 
                         if (response.success) {
 
-                            alert("successfully shared it now show instagram facebook snapchar whatsapp sahre options");
+                            alert("Successfully shared it. Now show instagram facebook snapchat whatsapp sahre options with a LINK and when done redirect to the home or that posts feed  \n\n\n\n"+response.message);
                         } else {
-                            alert('Failed to add person to the database.');
+                            alert('Failed .'+response.message);
                         }
                     } else {
                         // Request failed
@@ -146,7 +146,7 @@ require("components/includeAllHTML_CSS_FILES.php");
                 };
 
                 // Send the AJAX request with the person's ID
-                var params = 'ask=' + document.getElementById('questionBox');
+                var params = 'ask=' + document.getElementById('questionBox').value;
                 xhr.send(params);
             }
         

@@ -32,6 +32,32 @@ i{
   display: flex;
 }
 
+
+.notification{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin-bottom: 5px; */
+}
+
+
+
+.notificationBox
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  background-color: red;
+  color: white;
+  padding: 3px;
+  border-radius: 100%;
+  width: 18px;
+  height: 18px;
+margin-bottom: 20px;
+  margin-left:-23px ;
+}
+
 @media (max-width: 700px) {
   .homeFooterIcons {
     width: 100%;

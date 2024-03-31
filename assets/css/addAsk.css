@@ -6,8 +6,11 @@
     color: white    ;
     padding: 10px;
     border: 0;
-    background-color: rgba(0, 0, 255, 0.555);
-
+    /* background-color: rgba(0, 0, 255, 0.555); */
+    
+    background: linear-gradient(-300deg, rgba(0, 0, 255, 0.555), rgba(255, 255, 0, 0.416));
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    
     display: flex;
     justify-content: center;
     align-items: center;

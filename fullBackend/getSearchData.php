@@ -4,6 +4,7 @@
 // Process the search query
 $query = $_GET['query'];
 
+
 // Perform necessary actions with the query to get data
 // Here, let's assume we're retrieving some sample data
 $data = array(

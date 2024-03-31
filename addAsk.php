@@ -66,49 +66,11 @@ require("components/includeAllHTML_CSS_FILES.php");
 
     <div class="mainContent">
 
+    <h2> Add Ask </h2>
 
         <div class="add">
 
-            <a href="addAsk">
-                <div class="addItem">
-                    <!-- <button> -->
-                    <i class="bi bi-pencil-square"></i>
-                    <div>
-
-                        Add new Ask <br />(Question, Suggestion ...)
-                    </div>
-                    <!-- </button> -->
-                </div>
-            </a>
-
-
-            <div class="addItem">
-                <!-- <button> -->
-
-                <i class="bi bi-arrow-up-right-circle-fill"></i>
-                <div>
-                    Add new Poll
-                </div>
-                <!-- </button> -->
-            </div>
-
-
-
-            <div class="addItem">
-
-                <!-- <button> -->
-
-                <i class="bi bi-arrow-up-right-circle-fill"></i>
-
-                <!-- <i class="bi bi-incognito"></i> -->
-                <div>
-
-                    Upload Secret Posts
-                </div>
-
-                <!-- </button> -->
-            </div>
-
+           
 
         </div>
 

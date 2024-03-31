@@ -8,7 +8,7 @@ require("components/includeAllHTML_CSS_FILES.php");
 <body>
 
     <?php
-    require("components/header.php");
+    // require("components/header.php");
     require("components/homeFooter.php");
     require("assets/db.php");
 
@@ -21,13 +21,13 @@ require("components/includeAllHTML_CSS_FILES.php");
 
         if(isset($arr['picture']))
 		$photo= $arr['picture']; 
-		else $photo= "assets/graphics/app-logo.png";
+		else $photo= "assets/graphics/profile.png";
 		
 		// $p_id = $arr['username'] ;
 		$profile_email  = $arr['email'];
 		$gender  = $arr['gender'];
 		// $password = $arr['password'];
-		$name = $arr['first_name'].$arr['last_name'];
+		$name = $arr['first_name']." ".$arr['last_name'];
 		
 		$date = $arr['created'];
 		// $verify = $arr['verify'];
@@ -35,6 +35,8 @@ require("components/includeAllHTML_CSS_FILES.php");
 
 <div class="mainContent">
 
+
+<i class="bi bi-gear-wide-connected" style=""></i>
     <div class="mainProfile">
         <img src="<?php echo $photo ?>" width="70px" style="border-radius:100%"/>
         

@@ -8,7 +8,8 @@
         border-radius: 5px;
         width: 100%;
         padding: 10px;
-        border: 1px solid #e9e9e9;
+        color: black;
+        /* border: 1px solid #e9e9e9; */
     }
 </style>
 <?php

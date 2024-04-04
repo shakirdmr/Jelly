@@ -16,3 +16,11 @@
 .roundedImage{
     border-radius: 50%;
 }
+
+.searchImageBox{
+    
+    /* border: 1px solid red; */
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+}

@@ -1,40 +1,63 @@
-.homePageAskCard{
-    background: linear-gradient(-300deg, rgba(0, 0, 255, 0.155), rgba(255, 255, 0, 0.116));
-       
-    padding: 10px;
-    margin: 0 8px 10px 8px;
-    border-radius: 10px;
+.homePageAskCard {
+  background: linear-gradient(
+    -300deg,
+    rgba(0, 0, 255, 0.155),
+    rgba(255, 255, 0, 0.116)
+  );
+  padding: 10px;
+  margin: 0 15px 10px 15px;
+  border-radius: 10px;
 }
 
-
-.anAsk{
-    font-size: 22px;
-    margin-top: 15px;
-    margin-left: 5px;
+.anAsk {
+  font-size: 22px;
+  margin-top: 15px;
+  margin-left: 5px;
 }
 
+.profilePicture {
+  /* border: 1px solid red; */
 
-.profilePicture{
-    /* border: 1px solid red; */
+  width: 30px;
+  border-radius: 100px;
+}
+
+.noPostsFound {
+  /* border: 10px solid red; */
+  padding: 20px;
+  background-color: rgba(209, 209, 229, 0.525);
+  border-radius: 10px;
+  margin: 50px 40px 0 40px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.userInfo {
     
-    width: 30px;
-    border-radius: 100px;
 }
 
-.userInfo{
-width:100%
+.homePageAskCard a {
+  font-size: 15px;
+  color: black;
+}
+.time {
+  margin-top: 5px;
+  margin-left: 5px;
+  font-size: 12px;
 }
 
-.homePageAskCard a{
-    font-size: 15px;
-    color: black;
-}
-.time{
-    margin-top: 5px;
-    margin-left: 5px;
-    font-size: 12px;
+.answerBox {
+  /* border: 10px solid red; */
+  font-size: 12px;
+  margin: 5px;
+  width: 100%;
+  border-radius: 20px;
+  border: 0;
+  padding-left: 10px;
 }
 
-.answerBox{
-    width: 100%;
+@media (min-width: 700px) {
+  .answerBox {
+    width: 50%;
+  }
 }

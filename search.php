@@ -77,13 +77,7 @@ require("components/includeAllHTML_CSS_FILES.php");
         </div>
 
 
-        <div id="searchResults">
-        </div>
-
-
-
-
-
+      
 
         <div class="searchItemsContainer">
 

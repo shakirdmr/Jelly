@@ -25,6 +25,21 @@ i{
   justify-content: space-around;
 }
 
+
+.notificationBox{
+  width: 18px;
+  height: 18px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  background-color: red;
+  font-size: 10px;
+  margin: -5px 0px 0px -15px;
+}
+
+
 @media (max-width: 700px) {
   .homeFooterIcons {
     width: 100%;

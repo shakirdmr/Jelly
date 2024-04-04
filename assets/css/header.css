@@ -6,7 +6,7 @@ body{
 .header{
     padding: 5px;
     display: flex;
-    border: 10px solid red;
+    /* border: 10px solid red; */
     align-items: center;
     justify-items: center;
     justify-content: start;

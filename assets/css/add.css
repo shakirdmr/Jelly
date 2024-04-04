@@ -1,0 +1,17 @@
+.add{
+    width: 100%;
+
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.addItem{
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    padding: 5px;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}

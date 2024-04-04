@@ -40,7 +40,7 @@ require("components/includeAllHTML_CSS_FILES.php");
 
                 $arr = mysqli_fetch_array($query);
 
-                $name = $arr["first_name"];
+                $name = $arr["first_name"] . " ".$arr["last_name"];
                 $found_id =  $arr['userUniqueID'];
 
                 if (isset($arr['picture']))

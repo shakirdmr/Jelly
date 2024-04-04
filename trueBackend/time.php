@@ -23,7 +23,7 @@ function givetime($date)
     } elseif ($hr >= 1 && $hr < 24) {
         $value = "$hr h";
     } elseif ($day >= 1 && $day < 7) {
-        $value = ($day == 1) ? "yesterday" : "$day days ";
+        $value = ($day == 1) ? "1 day" : "$day days ";
     } elseif ($week >= 1) {
         $value = ($week == 1) ? "1 week" : "$week weeks ";
     } else {

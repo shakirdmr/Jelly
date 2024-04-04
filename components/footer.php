@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<footer class="mt-5 footer row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 "
+<footer class="footer row row-cols-1 row-cols-sm-2 row-cols-md-5 px-4 "
 style="border-radius:45px 45px 0 0">
     <div class="col mb-3">
         <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">

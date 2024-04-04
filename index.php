@@ -6,7 +6,7 @@ require('assets/traffic_saver.php');
 $login_button = '';
 
 if (!isset($_COOKIE['userUniqueID'])) {
-    $login_button = '<a href="' . $google_client->createAuthUrl() . '">
+    $login_button = '<a href="' . $google_client->createAuthUrl() . '" style="display:flex; justify-content:center;align-items:center">
           <button type="button" class="login-with-google-btn" >
         Continue with Google Account
         </button></a>';}
@@ -81,7 +81,7 @@ require("components/includeAllHTML_CSS_FILES.php");
     }
     ?>
 
-    <div class="loginBody">
+    <div class="loginBody" >
 
 
 
@@ -99,7 +99,7 @@ require("components/includeAllHTML_CSS_FILES.php");
             header("location:home.php?$message");
         } else {
 
-            echo '<div style="margin: 20px 0 100px 0;">
+            echo '<div style="margin: 20px 0 0px 0; padding-bottom:70px">
     
     ' . $login_button . '</div>';
         }

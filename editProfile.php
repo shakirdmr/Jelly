@@ -45,8 +45,7 @@ require("components/includeAllHTML_CSS_FILES.php");
     <div class="mainContent" style="padding-bottom:100px">
 
     
-    <i class="bi bi-gear-wide-connected" style=""></i>
-    
+   
     <h2> Edit Profile </h2>
 
         <div class="mainProfile">

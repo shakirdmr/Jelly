@@ -6,3 +6,14 @@
     padding: 9px;
     border-radius: 50px;
 }
+
+.settingsIcon{
+  border: 10px solid red;
+  display: flex;
+
+}
+
+.row{
+ display: flex; 
+  /* border: 1px solid red; */
+}

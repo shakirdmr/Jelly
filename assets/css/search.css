@@ -1,0 +1,18 @@
+.searchItemsContainer
+{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+}
+
+.searchItem{
+    /* border: 1px solid red; */
+    display: flex;
+    gap:20px;
+    align-items: center;
+}
+
+.roundedImage{
+    border-radius: 50%;
+}

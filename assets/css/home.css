@@ -1,0 +1,40 @@
+.homePageAskCard{
+    background: linear-gradient(-300deg, rgba(0, 0, 255, 0.155), rgba(255, 255, 0, 0.116));
+       
+    padding: 10px;
+    margin: 0 8px 10px 8px;
+    border-radius: 10px;
+}
+
+
+.anAsk{
+    font-size: 22px;
+    margin-top: 15px;
+    margin-left: 5px;
+}
+
+
+.profilePicture{
+    /* border: 1px solid red; */
+    
+    width: 30px;
+    border-radius: 100px;
+}
+
+.userInfo{
+width:100%
+}
+
+.homePageAskCard a{
+    font-size: 15px;
+    color: black;
+}
+.time{
+    margin-top: 5px;
+    margin-left: 5px;
+    font-size: 12px;
+}
+
+.answerBox{
+    width: 100%;
+}

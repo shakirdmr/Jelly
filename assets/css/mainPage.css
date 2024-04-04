@@ -49,6 +49,10 @@ i{
     color: #00bfff;
 }
 
+.roundedImage{
+    width: 60px;
+    border-radius: 100%;
+}
 .home_logo {
     display: flex;
     align-items: center;
@@ -99,7 +103,7 @@ a {
 
     /* border: 1px solid red; */
     margin: 10px 0 20px 0;
-    padding: 20px;
+    padding: 0 20px 0 20px;
     display: flex;
     align-items: start;
     flex-direction: column;
@@ -273,6 +277,12 @@ a {
     /* Add a text shadow for better visibility */
 
 
+}
+
+button{
+    border: 0;
+    border-radius: 20px;
+    padding: 5px 20px 5px 20px;
 }
 
 .becomeDriverForm_DIV {

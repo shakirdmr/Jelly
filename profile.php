@@ -9,10 +9,20 @@ require("components/includeAllHTML_CSS_FILES.php");
 <body style="margin-bottom: 100px;">
 
     <?php
+
     // require("components/header.php");
     require("components/homeFooter.php");
     require("assets/db.php");
     require("trueBackend/time.php");
+
+    if(isset($_GET["user"]))
+    {
+        if($userUniqueID == $_GET["user"])
+         $sameUserUsingAsWhoToFind = 1;
+
+        $userUniqueID = $_GET["user"];
+    }
+
 
     $q = "select * from users where userUniqueID='$userUniqueID'";
     $qry = mysqli_query($conn, $q);
@@ -44,15 +54,42 @@ require("components/includeAllHTML_CSS_FILES.php");
     <div style="position:relative; width:100%; display:flex">
 
         <h2>Profile</h2>
-        <i class="bi bi-gear-wide-connected" style="position:absolute; right:0"></i>
+
+        <?php 
+            if(isset($_GET["user"]))
+            {
+                if(isset($sameUserUsingAsWhoToFind))
+                echo "
+                <i class='bi bi-gear-wide-connected' style='position:absolute; right:0'></i> ";
+
+            }
+            else
+            echo "
+            <i class='bi bi-gear-wide-connected' style='position:absolute; right:0'></i> ";
+
+                ?>
+    
     </div>
 
         <div class="mainProfile" style="position:relative; width:100%">
 
             <img src="<?php echo $photo ?>" width="70px" style="border-radius:100%" />
 
-            <a href="editProfile.php">
-                <button class="editProfile"> Edit Profile </button></a>
+            <?php 
+            if(isset($_GET["user"]))
+            {
+                if(isset($sameUserUsingAsWhoToFind))
+                echo "
+            <a href='editProfile.php'>
+                <button class='editProfile'> Edit Profile </button></a> ";
+
+            }
+            else
+            echo "
+            <a href='editProfile.php'>
+                <button class='editProfile'> Edit Profile </button></a> ";
+
+                ?>
 
         </div>
 

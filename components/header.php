@@ -15,7 +15,7 @@
     <?php
 
     if (isset($_COOKIE["userUniqueID"])) {
-        echo '    <i class="bi bi-chat-left-dots"></i>';
+        echo '    <i class="bi bi-chat-dots"></i>';
         echo '<i class="bi bi-list"></i>';
     }
 

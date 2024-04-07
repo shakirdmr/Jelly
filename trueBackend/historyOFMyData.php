@@ -29,12 +29,16 @@ if ($tol_history == 0) {
         $arr_history = mysqli_fetch_array($qry_history);
         $id =   $arr_history["askID"];
 
-        echo "<a href='viewAsk.php?id=$id'> <div class='historyData'> <h4>" .  $ask = $arr_history["ask"]
-            . "</h4><div  class='subHistoryData' style='font-size:12px'>" . $arr_history["replies"] . " replies </div>  <div style='font-size:10px'>" .
+        echo " <div class='historyData'> <h4><a href='viewAsk.php?id=$id'>" .  $ask = $arr_history["ask"]
+            . "</a></h4>  ";
 
-            givetime($arr_history["time"]) . "</div>
+            echo "<input class='mt-3 answerBox' type='text' placeholder='reply secretly'/> ";
+
+            echo "<div  class='subHistoryData' style='font-size:12px'>" . $arr_history["replies"] . " replies </div>";
+
+            echo "<div style='font-size:10px'>".givetime($arr_history["time"]) . "</div>
         
-        </div> </a>";
+        </div> ";
     }
 }
 

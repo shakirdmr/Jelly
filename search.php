@@ -40,7 +40,7 @@ require("components/includeAllHTML_CSS_FILES.php");
 
                 $arr = mysqli_fetch_array($query);
 
-                $name = $arr["first_name"] . " ".$arr["last_name"];
+                $name = $arr["first_name"] . " " . $arr["last_name"];
                 $found_id =  $arr['userUniqueID'];
 
                 if (isset($arr['picture']))
@@ -63,12 +63,14 @@ require("components/includeAllHTML_CSS_FILES.php");
 
     <div class="mainContent">
 
-        <div style="width:100%;position: relative; display: flex;">
+        <div style="width:100%;position: relative; display: flex;" class='mb-4'>
 
             <form id="searchForm" style="display: flex; flex-grow: 1;">
-                <input type="text" name="query" id="searchInput" placeholder="Search friend name or email" style="width: 100%;" <?php
-                                                                                                                                if (isset($_GET["query"]))
-                                                                                                                                ?>>
+                <input type="text" name="query" id="searchInput" placeholder="Search friend name or email" style="width: 100%;" 
+                <?php    
+                 if (isset($_GET["query"]))     
+                 echo "value=".$_GET["query"] ;  
+                 ?>>
 
                 <button type="submit" style="position: absolute; right: 0; top: 0; bottom: 0; border: 0; background: 0;">
                     <i class="bi bi-search"></i>
@@ -77,44 +79,48 @@ require("components/includeAllHTML_CSS_FILES.php");
         </div>
 
 
-      
+
 
         <div class="searchItemsContainer">
 
             <?php
 
-        if (isset($usersFoundData)) {
+            if (isset($usersFoundData)) {
 
-            // Loop through the $usersFoundData array
-            foreach ($usersFoundData as $userData) {
-                // Access individual user data
-                $name = $userData["name"];
-                $found_id = $userData["found_id"];
+                // Loop through the $usersFoundData array
+                foreach ($usersFoundData as $userData) {
+                    // Access individual user data
+                    $name = $userData["name"];
+                    $found_id = $userData["found_id"];
 
-                $photo = $userData["photo"];
+                    $photo = $userData["photo"];
 
-                //CHECK IF I FOLLOW THAT PERSON OR NOT
-                $q = "SELECT * FROM following WHERE following='$found_id' AND follower='$userUniqueID' ";
+                    //CHECK IF I FOLLOW THAT PERSON OR NOT
+                    $q = "SELECT * FROM following WHERE following='$found_id' AND follower='$userUniqueID' ";
 
-                $query = mysqli_query($conn, $q);
+                    $query = mysqli_query($conn, $q);
 
-                $follow_unfollow_message = "NULL";
-                $tol = mysqli_num_rows($query);
-                if ($tol != 0)
-                    $follow_unfollow_message = "Following";
-                else
-                    $follow_unfollow_message = "Follow";
+                    $follow_unfollow_message = "NULL";
+                    $tol = mysqli_num_rows($query);
+                    if ($tol != 0)
+                        $follow_unfollow_message = "Following";
+                    else
+                        $follow_unfollow_message = "Follow";
 
-                echo "
+                    echo "
                     <div class='searchItem'>
                     
                     <div>
-                    <img src=$photo alt='user image'  
-                    class='roundedImage'/>
+                    <a   href='./profile?user=$found_id'>
+                     <img src=$photo alt='user image'  
+                     class='roundedImage'/>
+                    </a>
                     </div>
                     
                     <div>
-                    $name <br>
+                    <a   href='./profile?user=$found_id'>
+                    
+                    $name </a> <br>
                     
                     <button 
                     style='" . ($follow_unfollow_message == 'Follow' ? "background-color: blue; color: white;" : "") . "' 
@@ -126,10 +132,10 @@ require("components/includeAllHTML_CSS_FILES.php");
                     
                     </div>
                     ";
-                // Now you can use $name, $found_id, and $photo as needed
-                // echo "Name: $name, Found ID: $found_id, Photo: $photo <br><br><br>";
+                    // Now you can use $name, $found_id, and $photo as needed
+                    // echo "Name: $name, Found ID: $found_id, Photo: $photo <br><br><br>";
+                }
             }
-        }
 
             ?>
         </div>

@@ -1,17 +1,3 @@
-<style> 
-.notificationBox{
-  width: 18px;
-  height: 18px;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 100%;
-  background-color: red;
-  font-size: 10px;
-  margin: -10px 0px 0px -20px;
-}</style>
-
 <?php
 // Include Configuration File
 $userUniqueID = $_COOKIE["userUniqueID"];
@@ -33,46 +19,44 @@ if (!$query) {
 }
 
 // Determine active page
-echo $activePage = basename($_SERVER['PHP_SELF']); // Gets the current file name
+ $activePage = basename($_SERVER['PHP_SELF']); // Gets the current file name
 
 
 // Function to determine the active icon class
-function isActive($page, $currentPage) {
-    echo "HIIIIII";
-    return ($page == $currentPage) ? 'bi' : '';
+function isActive($page, $currentPage)
+{
+    return $page == $currentPage;
 }
 
-function isActivee(){
-    return "f";
-}
-
-echo isActivee();
 
 ?>
 
 <div class="homeFooter">
     <div class="homeFooterIcons">
-        <a href="home">
-            <i class="<?php echo isActive('home.php', $activePage); ?> bi-house-door"></i>
+        <a href="home.php">
+        
+            <i class="<?php echo isActive('home.php', $activePage) ? 'bi-house-door-fill' : 'bi-house-door'; ?>"></i>
         </a>
 
+
         <a href="search">
-            <i class="<?php echo isActive('search.php', $activePage); ?> bi-search"></i>
+            <i class="<?php echo isActive('search.php', $activePage) ? 'bi bi-search-heart-fill' :'bi-search'; ?>"></i>
         </a>
 
         <a href="add">
-            <i class="<?php echo isActive('add.php', $activePage); ?> bi-plus-square"></i>
+            <i class="<?php echo isActive('add.php', $activePage)  ||  isActive('addAsk.php', $activePage)?' bi-plus-square-fill':'bi-plus-square'; ?>"></i>
         </a>
 
         <a href="bell">
             <div class='notification'>
-                <i class="<?php echo isActive('bell.php', $activePage); ?> bi bi-bell" style="display: flex;"></i>
-                <?php if($totalNotifications !=0) echo "<div class='notificationBox'>".$totalNotifications." </div>"; ?>
+                <i style="display: flex;" class="<?php echo isActive('bell.php', $activePage) ? 'bi bi-bell-fill':'bi bi-bell'; ?>"> </i>
+                
+                <?php if ($totalNotifications != 0) echo "<div class='notificationBox'>" . $totalNotifications . " </div>"; ?>
             </div>
         </a>
 
         <a href="profile">
-            <i class="<?php echo isActive('profile.php', $activePage); ?> bi bi-person"></i>
+            <i class="<?php echo isActive('profile.php', $activePage) && !isset($_GET["user"]) ? 'bi bi-person-fill' :'bi bi-person'; ?>"></i>
         </a>
     </div>
 </div>

@@ -12,7 +12,7 @@
 }
 
 i{
-  color: rgba(0, 0, 0, 0.518);
+  color: black;
   font-size: 25px;
   border: 0;
 }
@@ -36,7 +36,7 @@ i{
   border-radius: 100%;
   background-color: red;
   font-size: 10px;
-  margin: -5px 0px 0px -15px;
+  margin: -10px 0px 0px -20px;
 }
 
 

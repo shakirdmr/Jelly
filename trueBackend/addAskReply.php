@@ -22,10 +22,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
             $q = "UPDATE asks SET replies = replies+1 WHERE askID = '$askID'";
-            mysqli_query($conn, $q);
+            if(!mysqli_query($conn, $q))
+            {
 
-            $success = true;
-            $message = "".$askID;
+
+                //CREATE A NEW NOTIFICATION
+
+                $success = false;
+                $message = mysqli_error($conn);
+            } else {
+
+                
+                $success = true;
+                $message = "";
+            }
         } else {
             $success = false;
             $message = mysqli_error($conn);

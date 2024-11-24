@@ -47,9 +47,9 @@ function isActive($page, $currentPage)
             <i class="<?php echo isActive('add.php', $activePage)  ||  isActive('addAsk.php', $activePage)?' bi-plus-square-fill':'bi-plus-square'; ?>"></i>
         </a>
 
-        <a href="bell">
+        <a href="notifications">
             <div class='notification'>
-                <i style="display: flex;" class="<?php echo isActive('bell.php', $activePage) ? 'bi bi-bell-fill':'bi bi-bell'; ?>"> </i>
+                <i style="display: flex;" class="<?php echo isActive('notifications.php', $activePage) ? 'bi bi-bell-fill':'bi bi-bell'; ?>"> </i>
                 
                 <?php if ($totalNotifications != 0) echo "<div class='notificationBox'>" . $totalNotifications . " </div>"; ?>
             </div>

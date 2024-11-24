@@ -8,9 +8,15 @@
         border-radius: 5px;
         width: 100%;
         padding: 10px;
+        font-size: 22px;
         color: black;
         /* border: 1px solid #e9e9e9; */
     }
+
+    .historyData  a{
+        color: black;
+    }
+
 </style>
 <?php
 
@@ -29,7 +35,7 @@ if ($tol_history == 0) {
         $arr_history = mysqli_fetch_array($qry_history);
         $id =   $arr_history["askID"];
 
-        echo " <div class='historyData'> <h4><a href='viewAsk.php?id=$id'>" .  $ask = $arr_history["ask"]
+        echo " <div class='historyData'> <a href='viewAsk.php?id=$id'>" .$arr_history["ask"]
             . "</a></h4>  ";
 
             echo "<input class='mt-3 answerBox' type='text' placeholder='reply secretly'/> ";

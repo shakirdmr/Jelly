@@ -1,4 +1,3 @@
-
 <?php
 $userUniqueID = $_COOKIE["userUniqueID"];
 
@@ -15,10 +14,9 @@ require("components/includeAllHTML_CSS_FILES.php");
     require("assets/db.php");
     require("trueBackend/time.php");
 
-    if(isset($_GET["user"]))
-    {
-        if($userUniqueID == $_GET["user"])
-         $sameUserUsingAsWhoToFind = 1;
+    if (isset($_GET["user"])) {
+        if ($userUniqueID == $_GET["user"])
+            $sameUserUsingAsWhoToFind = 1;
 
         $userUniqueID = $_GET["user"];
     }
@@ -49,74 +47,75 @@ require("components/includeAllHTML_CSS_FILES.php");
     // $verify = $arr['verify'];
     ?>
 
-    <div class="mainContent" >
+    <div class="mainContent">
 
-    <div style="position:relative; width:100%; display:flex">
+        <div style="position:relative; width:100%; display:flex">
 
-        <h2>Profile</h2>
+            <h2>Profile</h2>
 
-        <?php 
-            if(isset($_GET["user"]))
-            {
-                if(isset($sameUserUsingAsWhoToFind))
-                echo "
-                <i class='bi bi-gear-wide-connected' style='position:absolute; right:0'></i> ";
-
+            <?php
+            if (isset($_GET["user"]) && isset($sameUserUsingAsWhoToFind)) {
+                echo "<i class='bi bi-gear-wide-connected' style='position:absolute; right:0'></i>";
+            } elseif (!isset($_GET["user"])) {
+                echo "<i class='bi bi-gear-wide-connected' style='position:absolute; right:0'></i>";
             }
-            else
-            echo "
-            <i class='bi bi-gear-wide-connected' style='position:absolute; right:0'></i> ";
+            ?>
 
-                ?>
-    
-    </div>
+
+        </div>
 
         <div class="mainProfile" style="position:relative; width:100%">
 
-            <img src="<?php echo $photo ?>" width="70px" style="border-radius:100%" />
+        <div class="containerProfile" style="width: 80px; overflow:hidden; height:80px; 
+        border-radius:100%;display:flex; align-items:center; justify-content:center; ">
 
-            <?php 
-            if(isset($_GET["user"]))
-            {
-                if(isset($sameUserUsingAsWhoToFind))
+            <img src="shakir.jpg"
+            style="border-radius:100%; width:90%;
+            height:90%" />
+            
+        </div>
+            <?php
+            if (isset($_GET["user"])) {
+                if (isset($sameUserUsingAsWhoToFind))
+                    echo "
+            <a href='editProfile.php'>
+                <button class='editProfile'> Edit Profile </button></a> ";
+            } else
                 echo "
             <a href='editProfile.php'>
                 <button class='editProfile'> Edit Profile </button></a> ";
 
-            }
-            else
-            echo "
-            <a href='editProfile.php'>
-                <button class='editProfile'> Edit Profile </button></a> ";
-
-                ?>
+            ?>
 
         </div>
 
         <div class="subMainProfile" style="margin:10px 0 0 10px;">
             <h4> <?php echo $name ?></h4>
-            <h6> <?php echo $gender ?></h6>
-            <h6> <?php echo $profile_email ?></h6>
 
 
-            <div style="margin-top: 20px; display:flex" class="row">
-              
-                    <?php echo $asks; ?> Polls
-                
-                    <?php echo $polls; ?> Asks
-               
+            <!-- <div style="margin-top: 20px; display:flex" class="row">
+
+                <?php echo $asks; ?> Polls
+
+                <?php echo $polls; ?> Asks
+
+            </div> -->
+
+
+            <div style="display: flex; font-size:16px; font-weight:bold">
+
+           
+                <div>
+                <?php echo $followers; ?> Followers 
+        </div>
+
+                <div style='margin-left:10px'>
+                <?php echo $following; ?> Following
+        </div>
             </div>
 
 
-            <div class="row">
-               
-                    <?php echo $followers; ?> Followers
-              
-                    <?php echo $following; ?> Following
-            </div>
-
-
-            <div style="margin-top: 10px;">
+            <div style="">
                 Joined <?php echo $date ?>
             </div>
         </div>

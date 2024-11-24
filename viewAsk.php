@@ -7,7 +7,6 @@ require('assets/traffic_saver.php');
 
 
 require("components/includeAllHTML_CSS_FILES.php");
-require("components/header.php");
 echo "<br>";
 require("components/homeFooter.php");
 require("trueBackend/time.php");
@@ -81,7 +80,8 @@ echo "<div class='time'>" . givetime($time) . "</div>
 
 
       
-echo "<div class='replies' style='margin:15px'> ";
+echo "<div class='replies' style='margin:15px'> 
+<h3>Replies </h3>";
 
 
 //NOW CHECK REPLIES
@@ -114,10 +114,11 @@ if ($tol == 0) {
         $askReply = $arr["askReply"];
         $time = giveTime($arr["time"]);
 
-        echo " <div style='border-bottom:1px solid #f1f1f1; padding:10px; '> 
-        <div  style='display:flex; align-items:center; justify-content:center; background-color:#f1f1f1; width:35px; height:35px; border-radius:20%; opacity:0.6'>$first_digit_of_repliers_name </div>
+        echo " <div style='border-bottom:1px solid #f1f1f1; padding:10px 0 0 10px; '>
 
-        <div style='display:flex;align-items:center; margin:10px 0 0 0px'>
+        <div  style='display:flex; font-size:12px; align-items:center; justify-content:center; background-color:#f1f1f1; width:15px; height:15px; border-radius:20%; color:#a5a5a5'>$first_digit_of_repliers_name </div>
+
+        <div style='display:flex;align-items:center; margin:5px 0 0 0px'>
         <h3 style='color:#5a5a5a'>$askReply  </h3>
                     <i style='font-size: 12px;'>$time</i> </div>
                     </div>";

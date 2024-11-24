@@ -1,10 +1,12 @@
+    
+    
     <?php
 
     // // Set cookie expiration time to 6 months
     $expiration = time() + (6 * 30 * 24 * 60 * 60); // 6 months from now
 
     // // Set the cookie
-    //  setcookie('userUniqueID', "65ffeb88396e69.61375746_Shakir", $expiration, '/');
+     setcookie('userUniqueID', "66000e5729ae04.96590207_Shakirsjd", $expiration, '/');
 
     // Include Configuration File
     $userUniqueID = $_COOKIE["userUniqueID"];
@@ -111,22 +113,25 @@
             // print_r( $a);
             return $b['time'] - $a['time'];
         });
+
+
         // Display posts on the home page
         foreach ($posts as $post) {
-            // var_dump($post);
+
+            // Constructing the ask card
             echo "<div class='homePageAskCard'>
+                        <a href='./profile?user=" . $post['userUniqueID'] . "'>
+                            <div style='display:inline-flex; align-items:center'>
+                                <img class='profilePicture' src='" . $post['picture'] . "'>  
+                                <div style='margin-left:5px'>" . $post["name"] . "</div>
+                            </div>
+                        </a> 
+                        <div class='anAsk'>
+                            <a style='font-size:22px' href='viewAsk.php?id=" . $post['askID'] . "'>" . $post['ask'] . "</a>
+                        </div>";
 
-            <a  href='./profile?user=" . $post['userUniqueID'] . "'>
-                    <div  style='display:inline-flex; align-items:center'>
-
-                        <img class='profilePicture' src='" . $post['picture'] . "'>  
-                        <div style='margin-left:5px'>
-                        " . $post["name"] .
-                " </div> </div></a> 
-
-                    <div class='anAsk'>"
-                . $post['ask'] . "</div>";
             $found_id_ask = $post["askID"];
+
 
             // if - else
             echo "<div style='display:flex'>
@@ -157,7 +162,7 @@
 
     <script>
         function addReply(askID) {
-           
+
             // AJAX request
             var askReply = document.querySelector(`input[id="${askID}/"]`).value;
 

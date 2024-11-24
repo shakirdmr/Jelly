@@ -9,8 +9,23 @@
   border-radius: 10px;
 }
 
+img{
+object-fit: cover;
+}
+
+.containerProfile {
+  background: linear-gradient(red, blue);
+ border-radius: 50%; /* Makes the shape circular */
+  overflow: hidden; /* Ensures the image is cropped to the circle */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .anAsk {
+  
   font-size: 22px;
+  color: black;
   margin-top: 15px;
   margin-left: 5px;
 }

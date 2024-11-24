@@ -112,7 +112,7 @@ require("components/includeAllHTML_CSS_FILES.php");
                     
                     <div>
                     <a   href='./profile?user=$found_id'>
-                     <img src=$photo alt='user image'  
+                     <img src='shaw.jpg' alt='user image'  
                      class='roundedImage'/>
                     </a>
                     </div>
